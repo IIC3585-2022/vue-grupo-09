@@ -6,16 +6,22 @@
       v-model="search"
       placeholder="Busca un lugar"
     />
-    <button type="submit">Buscar</button>
+    <button type="submit" v-on:click="getCityWeather(search)">Buscar</button>
   </div>
 </template>
 
 <script>
+import { getWeatherFromCity } from "../scripts/weather.js";
 export default {
   data() {
     return {
       search: "",
     };
+  },
+  methods: {
+    async getCityWeather(search) {
+      console.log(await getWeatherFromCity(search));
+    },
   },
 };
 </script>
