@@ -14,7 +14,6 @@ export default {
   methods: {
     getTempInfo() {
       const tempInfo = this.$store.getters.getTempInfo;
-      console.log(tempInfo.temp);
       return `Temp: ${tempInfo.temp} Feels Like: ${tempInfo.feels_like}\n Max Temp: ${tempInfo.temp_max} \n Min Temp: ${tempInfo.temp_min} \n Humidity: ${tempInfo.humidity} \n Pressure: ${tempInfo.pressure}`;
     },
   },

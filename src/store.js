@@ -42,6 +42,9 @@ export const store = createStore({
     getTempInfo(state) {
       return state.weather.main;
     },
+    getCoords(state) {
+      return state.weather.coord;
+    },
   },
   actions: {
     // acciones pueden ser asincronas
