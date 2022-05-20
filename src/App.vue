@@ -1,10 +1,23 @@
 <script setup>
 import searchBar from "./components/searchBar.vue";
+import TheCounter from "./components/TheCounter.vue";
 </script>
 
 <template>
-  <searchBar></searchBar>
+  <searchBar />
+  <TheCounter />
 </template>
+
+<script>
+export default {
+  name: "App",
+  el: "#app",
+  components: {
+    searchBar,
+    TheCounter,
+  },
+};
+</script>
 
 <style>
 @import "./assets/base.css";
