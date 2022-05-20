@@ -20,6 +20,7 @@ export default {
   methods: {
     makeSearch() {
       this.$store.dispatch("makeSearch", this.search);
+      this.search = "";
     },
   },
   computed: {

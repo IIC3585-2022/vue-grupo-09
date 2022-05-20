@@ -4,6 +4,7 @@ import WeatherCard from "./components/WeatherCard.vue";
 import TempCard from "./components/TempCard.vue";
 import CoordsCard from "./components/CoordsCard.vue";
 import WindCard from "./components/WindCard.vue";
+import HomeButton from "./components/HomeButton.vue";
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import WindCard from "./components/WindCard.vue";
   <TempCard />
   <CoordsCard />
   <WindCard />
+  <HomeButton />
 </template>
 
 <script>
@@ -24,6 +26,7 @@ export default {
     TempCard,
     CoordsCard,
     WindCard,
+    HomeButton,
   },
 };
 </script>

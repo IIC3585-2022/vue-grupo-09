@@ -25,6 +25,16 @@ export const store = createStore({
     hideSearchBar(state) {
       state.searchVisibility = false;
     },
+    showSearchBar(state) {
+      state.searchVisibility = true;
+    },
+    unsetWeather(state) {
+      state.weatherSet = false;
+      state.weather = "";
+    },
+    restoreSearch(state) {
+      state.search = "";
+    },
   },
   getters: {
     getSearch(state) {
@@ -57,6 +67,12 @@ export const store = createStore({
       context.commit("changeSearch", value);
       context.commit("hideSearchBar");
       context.commit("changeWeather", weather);
+    },
+
+    goHome(context) {
+      context.commit("unsetWeather");
+      context.commit("restoreSearch");
+      context.commit("showSearchBar");
     },
   },
 });
