@@ -1,17 +1,16 @@
 <template>
-  <div id="bar" class="search-wrapper">
+  <div id="bar" v-show="getVisibility" class="search-wrapper">
     <input
       class="input-search"
       type="text"
       v-model="search"
       placeholder="Busca un lugar"
     />
-    <button type="submit" v-on:click="getCityWeather(search)">Buscar</button>
+    <button type="submit" v-on:click="makeSearch">Buscar</button>
   </div>
 </template>
 
 <script>
-import { getWeatherFromCity } from "../scripts/weather.js";
 export default {
   data() {
     return {
@@ -19,8 +18,13 @@ export default {
     };
   },
   methods: {
-    async getCityWeather(search) {
-      console.log(await getWeatherFromCity(search));
+    makeSearch() {
+      this.$store.dispatch("makeSearch", this.search);
+    },
+  },
+  computed: {
+    getVisibility() {
+      return this.$store.getters.getSearchVisibility;
     },
   },
 };

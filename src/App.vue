@@ -1,11 +1,9 @@
 <script setup>
-import searchBar from "./components/searchBar.vue";
-import TheCounter from "./components/TheCounter.vue";
+import SearchBar from "./components/SearchBar.vue";
 </script>
 
 <template>
-  <searchBar />
-  <TheCounter />
+  <SearchBar />
 </template>
 
 <script>
@@ -13,8 +11,7 @@ export default {
   name: "App",
   el: "#app",
   components: {
-    searchBar,
-    TheCounter,
+    SearchBar,
   },
 };
 </script>
