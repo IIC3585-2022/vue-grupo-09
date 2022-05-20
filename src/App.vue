@@ -1,9 +1,11 @@
 <script setup>
 import SearchBar from "./components/SearchBar.vue";
+import WeatherCard from "./components/WeatherCard.vue";
 </script>
 
 <template>
   <SearchBar />
+  <WeatherCard />
 </template>
 
 <script>
@@ -12,6 +14,7 @@ export default {
   el: "#app",
   components: {
     SearchBar,
+    WeatherCard,
   },
 };
 </script>

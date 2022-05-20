@@ -9,6 +9,7 @@ export const store = createStore({
       search: "",
       weather: {},
       searchVisibility: true,
+      weatherSet: false,
     };
   },
   mutations: {
@@ -19,6 +20,7 @@ export const store = createStore({
     changeWeather(state, weather) {
       state.weather = weather;
       console.log(state.weather);
+      state.weatherSet = true;
     },
     hideSearchBar(state) {
       state.searchVisibility = false;
@@ -31,15 +33,21 @@ export const store = createStore({
     getSearchVisibility(state) {
       return state.searchVisibility;
     },
+    getWeather(state) {
+      return state.weather;
+    },
+    getWeatherSet(state) {
+      return state.weatherSet;
+    },
   },
   actions: {
     // acciones pueden ser asincronas
     async makeSearch(context, value) {
       const weather = await getWeatherFromCity(value);
       if (!weather) return null;
-      context.commit("changeWeather", weather);
       context.commit("changeSearch", value);
       context.commit("hideSearchBar");
+      context.commit("changeWeather", weather);
     },
   },
 });
