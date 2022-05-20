@@ -36,7 +36,7 @@ export default {
   justify-content: center;
   padding: 1rem;
   border-radius: 0.5rem;
-  background-color: hsla(154, 73%, 68%, 0.2);
+  background-color: hsla(209, 82%, 52%, 0.63);
   font-size: auto;
   color: white;
 }
