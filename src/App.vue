@@ -1,11 +1,13 @@
 <script setup>
 import SearchBar from "./components/SearchBar.vue";
 import WeatherCard from "./components/WeatherCard.vue";
+import TempCard from "./components/TempCard.vue";
 </script>
 
 <template>
   <SearchBar />
   <WeatherCard />
+  <TempCard />
 </template>
 
 <script>
@@ -15,6 +17,7 @@ export default {
   components: {
     SearchBar,
     WeatherCard,
+    TempCard,
   },
 };
 </script>
