@@ -1,27 +1,35 @@
 <script setup>
-import HelloWorld from "./components/HelloWorld.vue";
-import TheWelcome from "./components/TheWelcome.vue";
+import SearchBar from "./components/SearchBar.vue";
+import WeatherCard from "./components/WeatherCard.vue";
+import TempCard from "./components/TempCard.vue";
+import CoordsCard from "./components/CoordsCard.vue";
+import WindCard from "./components/WindCard.vue";
+import HomeButton from "./components/HomeButton.vue";
 </script>
 
 <template>
-  <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="./assets/logo.svg"
-      width="125"
-      height="125"
-    />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <SearchBar />
+  <WeatherCard />
+  <TempCard />
+  <CoordsCard />
+  <WindCard />
+  <HomeButton />
 </template>
+
+<script>
+export default {
+  name: "App",
+  el: "#app",
+  components: {
+    SearchBar,
+    WeatherCard,
+    TempCard,
+    CoordsCard,
+    WindCard,
+    HomeButton,
+  },
+};
+</script>
 
 <style>
 @import "./assets/base.css";
