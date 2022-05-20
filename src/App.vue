@@ -3,6 +3,7 @@ import SearchBar from "./components/SearchBar.vue";
 import WeatherCard from "./components/WeatherCard.vue";
 import TempCard from "./components/TempCard.vue";
 import CoordsCard from "./components/CoordsCard.vue";
+import WindCard from "./components/WindCard.vue";
 </script>
 
 <template>
@@ -10,6 +11,7 @@ import CoordsCard from "./components/CoordsCard.vue";
   <WeatherCard />
   <TempCard />
   <CoordsCard />
+  <WindCard />
 </template>
 
 <script>
@@ -21,6 +23,7 @@ export default {
     WeatherCard,
     TempCard,
     CoordsCard,
+    WindCard,
   },
 };
 </script>

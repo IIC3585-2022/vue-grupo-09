@@ -45,6 +45,9 @@ export const store = createStore({
     getCoords(state) {
       return state.weather.coord;
     },
+    getWind(state) {
+      return state.weather.wind;
+    },
   },
   actions: {
     // acciones pueden ser asincronas
