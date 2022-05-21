@@ -11,7 +11,7 @@ export default {
     getCity() {
       let capitalizeFirstLetter = (string) => {
         return string.charAt(0).toUpperCase() + string.slice(1);
-      }
+      };
       return capitalizeFirstLetter(this.$store.getters.getSearch);
     },
   },
