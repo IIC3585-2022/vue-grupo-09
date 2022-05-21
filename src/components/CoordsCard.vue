@@ -36,6 +36,7 @@ export default {
   background-color: rgb(100, 40, 0);
   font-size: auto;
   color: white;
+  margin: 5px;
 }
 .coords-icon {
   display: flex;

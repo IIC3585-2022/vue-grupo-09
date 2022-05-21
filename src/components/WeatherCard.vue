@@ -39,5 +39,6 @@ export default {
   background-color: hsla(209, 82%, 52%, 0.63);
   font-size: auto;
   color: white;
+  margin: 5px;
 }
 </style>
