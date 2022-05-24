@@ -36,5 +36,6 @@ export default {
   background-color: rgb(68, 0, 107);
   font-size: auto;
   color: white;
+  margin: 5px;
 }
 </style>

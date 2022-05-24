@@ -1,4 +1,5 @@
 <script setup>
+import MainTitle from "./components/MainTitle.vue";
 import SearchBar from "./components/SearchBar.vue";
 import WeatherCard from "./components/WeatherCard.vue";
 import TempCard from "./components/TempCard.vue";
@@ -8,6 +9,7 @@ import HomeButton from "./components/HomeButton.vue";
 </script>
 
 <template>
+  <MainTitle />
   <SearchBar />
   <WeatherCard />
   <TempCard />
@@ -35,7 +37,7 @@ export default {
 @import "./assets/base.css";
 
 #app {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
   padding: 2rem;
 

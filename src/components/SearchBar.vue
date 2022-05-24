@@ -1,12 +1,18 @@
 <template>
-  <div id="bar" v-show="getVisibility" class="search-wrapper">
+  <div id="bar" v-show="getVisibility" class="search-wrapper input-group mb-3">
     <input
       class="input-search"
       type="text"
       v-model="search"
       placeholder="Busca un lugar"
     />
-    <button type="submit" v-on:click="makeSearch">Buscar</button>
+    <button
+      class="btn btn-outline-secondary"
+      type="submit"
+      v-on:click="makeSearch"
+    >
+      Buscar
+    </button>
   </div>
 </template>
 
@@ -39,14 +45,17 @@ export default {
   justify-content: center;
   width: 40vw;
   height: 10vh;
-  padding: 1rem;
+  padding: 15px;
   border-radius: 0.5rem;
   align-self: center;
+  grid-column: span 2;
+  margin: 15px;
 }
 .input-search {
-  width: 100%;
+  width: 75%;
   height: 100%;
   font-size: 1.5rem;
+  padding: 10px;
 }
 button {
   width: 25%;

@@ -13,8 +13,14 @@
 export default {
   methods: {
     getTempInfo() {
+      const kelvinToCelsius = (temp) => (temp - 273.15).toFixed(2);
       const tempInfo = this.$store.getters.getTempInfo;
-      return `Temp: ${tempInfo.temp} Feels Like: ${tempInfo.feels_like}\n Max Temp: ${tempInfo.temp_max} \n Min Temp: ${tempInfo.temp_min} \n Humidity: ${tempInfo.humidity} \n Pressure: ${tempInfo.pressure}`;
+      return `Temp: ${kelvinToCelsius(tempInfo.temp)}°C\n
+              Feels Like: ${kelvinToCelsius(tempInfo.feels_like)}°C\n
+              Max Temp: ${kelvinToCelsius(tempInfo.temp_max)}°C\n 
+              Min Temp: ${kelvinToCelsius(tempInfo.temp_min)}°C\n
+              Humidity: ${tempInfo.humidity} \n
+              Pressure: ${tempInfo.pressure}`;
     },
   },
   computed: {
@@ -36,6 +42,7 @@ export default {
   background-color: hsl(0, 0%, 96%);
   font-size: auto;
   color: black;
+  margin: 5px;
 }
 .temp-icon {
   display: flex;
